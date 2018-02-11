@@ -1,8 +1,32 @@
 First we have to Create a link between our Github and our local machine. We make use of the ssh for this. 
 
-For windows, install git bash. 
+For windows, we have to install and use the Git Bash (https://git-scm.com/downloads). For mac, we can continue to use the Terminal.
 
-We have to create a ssh id, which will generate a public along and we have to add this to the Github repository under the Settings tab. 
+We have to create a ssh id, which will generate a public key along and we have to add this to the Github repository under the Settings tab. 
 
-The command to generate an SSH key : ssh-keygen -t rsa -C "your_email@example.com"
+	The command to generate an SSH key : 
+	
+		ssh-keygen -t rsa -C "your_email@example.com"
+		
+	This may ask for a default path and you can continue with the same.
 
+Now you may go to the .ssh folder and look for id_rsa.pub
+
+		Path for Mac: /Users/<username>/.ssh
+		Path for Windows: /c/Users/Lakshmi/.ssh
+
+Copy the contents of the id_rsa.pub file and paste it in your "SSH and GPG keys" section (https://github.com/settings/keys) within the Settings Page of your Github Account.
+
+You may add the contents under the "New SSH Key" and save it. 
+
+This will establish a connection between your system and local
+================================================================================================================
+
+You have to configure the Username and Email address in your system, so that this matches to the Github account.
+
+Run these in the GitBash / Terminal:
+
+		git config --global user.email "your_Email@address.com"
+		git config --global user.name "Your name"
+
+================================================================================================================
